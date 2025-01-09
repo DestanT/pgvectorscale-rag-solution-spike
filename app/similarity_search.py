@@ -10,7 +10,7 @@ vec = VectorStore()
 # Shipping question
 # --------------------------------------------------------------
 
-relevant_question = "What are your shipping options?"
+relevant_question = "How can I return an item?"
 results = vec.search(relevant_question, limit=3)
 
 response = Synthesizer.generate_response(question=relevant_question, context=results)
