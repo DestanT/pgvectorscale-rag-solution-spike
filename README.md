@@ -1,4 +1,4 @@
-# Building a High-Performance RAG Solution with Pgvectorscale and Python
+# Building a High-Performance RAG Solution with Pgvectorscale and Python (Credit to Dave Ebbelaar)
 
 This tutorial will guide you through setting up and using `pgvectorscale` with Docker and Python, leveraging OpenAI's powerful `text-embedding-3-small` model for embeddings. You'll learn to build a cutting-edge RAG (Retrieval-Augmented Generation) solution, combining advanced retrieval techniques (including hybrid search) with intelligent answer generation based on the retrieved context. Perfect for AI engineers looking to enhance their projects with state-of-the-art vector search and generation capabilities with the power of PostgreSQL.
 
@@ -43,26 +43,6 @@ Pgvectorscale Vector builds on top of [pgvector](https://github.com/pgvector/pgv
 ## Detailed Instructions
 
 ### 1. Set up Docker environment
-
-Create a `docker-compose.yml` file with the following content:
-
-```yaml
-services:
-  timescaledb:
-    image: timescale/timescaledb-ha:pg16
-    container_name: timescaledb
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=password
-    ports:
-      - "5432:5432"
-    volumes:
-      - timescaledb_data:/var/lib/postgresql/data
-    restart: unless-stopped
-
-volumes:
-  timescaledb_data:
-```
 
 Run the Docker container:
 
